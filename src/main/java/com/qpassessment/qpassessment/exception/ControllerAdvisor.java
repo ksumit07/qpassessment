@@ -15,7 +15,7 @@ import java.util.Map;
 public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(QuantityExceededException.class)
-    public ResponseEntity<Object> handleCityNotFoundException(
+    public ResponseEntity<Object> handleQuantityExceededException(
             QuantityExceededException ex, WebRequest request) {
 
         Map<String, Object> body = new LinkedHashMap<>();
