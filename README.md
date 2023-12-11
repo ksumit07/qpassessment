@@ -1,6 +1,3 @@
-Certainly! Below is an example README.md file for a Grocery Booking API project implemented using Spring Boot and Hibernate:
-
----
 
 # Grocery Booking API
 
@@ -26,7 +23,7 @@ The Grocery Booking API is a backend service designed to manage grocery items, u
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/grocery-booking-api.git
+   git clone https://github.com/ksumit07/qpassessment.git
    ```
 
 2. Navigate to the project directory:
@@ -52,9 +49,13 @@ The Grocery Booking API is a backend service designed to manage grocery items, u
 The API provides the following endpoints:
 
 - **Admin Endpoints**:
-  - `/api/admin/grocery/items`: CRUD operations for managing grocery items.
+    CRUD operations for managing grocery items.
+  - `/api/grocery/items`
+  - `/api/grocery/addItems`
+  - `/api/grocery/editItems`
+  - `/api/grocery/deleteItems`
 - **User Endpoints**:
-  - `/api/user/grocery/items`: View available grocery items.
+  - `/api/grocery/availableItems`: View available grocery items.
   - `/api/user/orders`: Place an order for multiple grocery items.
 
 ### Database Configuration
@@ -64,23 +65,20 @@ The project uses an H2 in-memory database by default for demonstration purposes.
 ### Project Structure
 
 - `src/main/java`: Contains the Java source code.
-  - `com.example.grocerybookingapi.entity`: Entity classes representing database tables.
-  - `com.example.grocerybookingapi.repository`: Spring Data JPA repositories.
-  - `com.example.grocerybookingapi.service`: Service classes implementing business logic.
-  - `com.example.grocerybookingapi.controller`: Controllers defining API endpoints.
+  - `com.qpassessment.qpassessment.entity`: Entity classes representing database tables.
+  - `com.qpassessment.qpassessment.repository`: Spring Data JPA repositories.
+  - `com.qpassessment.qpassessment.service`: Service classes implementing business logic.
+  - `com.qpassessment.qpassessment.controller`: Controllers defining API endpoints.
 - `src/main/resources`: Contains application properties and configuration files.
-
-### Contributing
-
-Contributions are welcome! Fork the repository, make changes, and create a pull request with your enhancements or bug fixes.
-
+- `src/main/resources/static/ddl.sql`: Contains Data Definition Queries and dummy data insertion queries.
+- `src/main/resources/static/ER-diagram.pdf`: Contains ER diagram for the solution of the assessment.
 ### License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ### Acknowledgments
 
-- This project is created for demonstration purposes.
+- This project is created for assessment purposes.
 - Special thanks to [Spring](https://spring.io/) and [Hibernate](https://hibernate.org/) communities for their excellent frameworks.
 
 ---

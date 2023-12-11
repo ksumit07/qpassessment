@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 @Service
@@ -35,7 +34,7 @@ public class OrderService {
     public Order placeOrder(UserOrderDTO userOrderDTO) throws QuantityExceededException {
         Order order = new Order();
         order.setOrderDate(new Date());
-        order.setStatus("Processing");
+        order.setStatus("Order placed successfully");
         order.setUser(userRepository.findById(userOrderDTO.getUserId()).get());
         Order savedOrder = orderRepository.save(order);
         for (GroceryItem groceryItem : userOrderDTO.getGroceryItemList()) {
